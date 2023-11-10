@@ -26,7 +26,7 @@ func _ready():
 func _init(data : UnitData, color := Color.WHITE):
 	unit_data = data
 	health = data.health
-	attack = data.attack	
+	attack = data.attack
 	tier = data.tier
 	buy = data.buy
 	sell = data.sell

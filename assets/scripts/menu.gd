@@ -18,7 +18,7 @@ func _input(event):
 	if (event is InputEventKey and event.is_released()
 		and units.size() <= max_units - 1): # wtf why is size() always one more?
 		var new_unit := Unit.new(
-			preload("res://assets/resources/neko_arc.tres"),
+			preload("res://assets/units/neko_arc.tres"),
 			Color(
 				randf_range(0,1),
 				randf_range(0,1),

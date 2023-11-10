@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://dabooxdw2xn5v"]
+[gd_scene load_steps=9 format=3 uid="uid://dabooxdw2xn5v"]
 
 [ext_resource type="Script" path="res://assets/scripts/menu.gd" id="1_upw7i"]
 [ext_resource type="Texture2D" uid="uid://ch7d7ii1xrj8x" path="res://assets/img/bg_day.bmp" id="2_a4er6"]
+[ext_resource type="Texture2D" uid="uid://bvq1if15p5veo" path="res://assets/img/dice.svg" id="4_enhm3"]
 [ext_resource type="Script" path="res://assets/scripts/roll_button.gd" id="7_2c81v"]
 [ext_resource type="Texture2D" uid="uid://c7h7u8vihe8g0" path="res://assets/img/sword.svg" id="7_nmf4y"]
 [ext_resource type="Texture2D" uid="uid://dr5bwwh7aew0c" path="res://assets/img/snowflake.svg" id="7_ygbje"]
@@ -43,11 +44,13 @@ mouse_filter = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="TeamContainer" type="HBoxContainer" parent="UnitsContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 mouse_filter = 2
 
 [node name="ShopContainer" type="HBoxContainer" parent="UnitsContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 
@@ -66,6 +69,8 @@ metadata/_edit_use_anchors_ = true
 layout_direction = 1
 layout_mode = 2
 size_flags_horizontal = 3
+text = "Roll"
+icon = ExtResource("4_enhm3")
 icon_alignment = 2
 expand_icon = true
 script = ExtResource("7_2c81v")
@@ -87,6 +92,29 @@ icon = ExtResource("7_nmf4y")
 icon_alignment = 2
 expand_icon = true
 script = ExtResource("11_1cky0")
+
+[node name="StatusContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.131944
+anchor_top = 0.0432099
+anchor_right = 0.868056
+anchor_bottom = 0.226852
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="StatusContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Panel2" type="Panel" parent="StatusContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Panel3" type="Panel" parent="StatusContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
 
 [connection signal="pressed" from="ButtonContainer/RollButton" to="ButtonContainer/RollButton" method="_on_pressed"]
 [connection signal="pressed" from="ButtonContainer/FreezeButton" to="ButtonContainer/FreezeButton" method="_on_pressed"]
