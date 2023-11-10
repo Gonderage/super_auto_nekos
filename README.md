@@ -1,3 +1,2 @@
-# superautopetsclone
-godot super auto pets clone but all neko arc.
-big wip
+# Super Auto Pets but it's all Neko Arcs
+Big wip made in Godot Engine.
