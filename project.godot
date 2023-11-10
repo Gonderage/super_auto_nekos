@@ -8,18 +8,26 @@
 
 config_version=5
 
+[addons]
+
+resources_spreadsheet_view/color_rows=true
+resources_spreadsheet_view/color_arrays=true
+resources_spreadsheet_view/array_min_width=128.0
+resources_spreadsheet_view/resource_preview_size=32.0
+resources_spreadsheet_view/clip_headers=false
+resources_spreadsheet_view/dupe_arrays=true
+resources_spreadsheet_view/context_menu_on_leftclick=false
+
 [application]
 
-config/name="sap"
-run/main_scene="res://shop.tscn"
-config/features=PackedStringArray("4.0", "Mobile")
-config/icon="res://icon.svg"
+config/name="Super Auto Nekos"
+run/main_scene="res://assets/scenes/menu.tscn"
+config/features=PackedStringArray("4.1", "Mobile")
+config/icon="res://assets/img/icon.svg"
 
-[display]
+[editor_plugins]
 
-window/size/viewport_width=1920
-window/size/viewport_height=1080
-window/size/always_on_top=true
+enabled=PackedStringArray("res://addons/Todo_Manager/plugin.cfg", "res://addons/editor_icon_previewer/plugin.cfg")
 
 [rendering]
 
