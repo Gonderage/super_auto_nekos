@@ -23,7 +23,7 @@ resources_spreadsheet_view/context_menu_on_leftclick=false
 config/name="Super Auto Nekos"
 run/main_scene="res://assets/scenes/menu.tscn"
 config/features=PackedStringArray("4.1", "Mobile")
-config/icon="res://assets/img/icon.svg"
+config/icon="res://assets/img/neko_arc.png"
 
 [editor_plugins]
 

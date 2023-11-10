@@ -1,6 +1,3 @@
 res://assets/scenes/menu.tscn
-res://assets/scripts/unit.gd
-res://assets/scripts/menu.gd
 res://assets/scripts/roll_button.gd
-res://assets/scenes/freeze_button.gd
-res://assets/scenes/fight_button.gd
+res://assets/scripts/menu.gd
