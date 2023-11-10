@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="UnitData" load_steps=3 format=3 uid="uid://c0gf7i5ai1giv"]
+
+[ext_resource type="Script" path="res://assets/scripts/unit_data.gd" id="1_fcrn5"]
+[ext_resource type="Texture2D" uid="uid://i0atiufjbjw2" path="res://assets/img/neko_arc.png" id="2_ht88e"]
+
+[resource]
+script = ExtResource("1_fcrn5")
+name = "Neko Arc"
+health = 3
+attack = 2
+tier = 0
+buy = 3
+sell = 0
+texture = ExtResource("2_ht88e")

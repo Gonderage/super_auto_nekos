@@ -1,0 +1,92 @@
+[gd_scene load_steps=8 format=3 uid="uid://dabooxdw2xn5v"]
+
+[ext_resource type="Script" path="res://assets/scripts/menu.gd" id="1_upw7i"]
+[ext_resource type="Texture2D" uid="uid://ch7d7ii1xrj8x" path="res://assets/img/bg_day.bmp" id="2_a4er6"]
+[ext_resource type="Script" path="res://assets/scripts/roll_button.gd" id="7_2c81v"]
+[ext_resource type="Texture2D" uid="uid://c7h7u8vihe8g0" path="res://assets/img/sword.svg" id="7_nmf4y"]
+[ext_resource type="Texture2D" uid="uid://dr5bwwh7aew0c" path="res://assets/img/snowflake.svg" id="7_ygbje"]
+[ext_resource type="Script" path="res://assets/scenes/freeze_button.gd" id="9_spln8"]
+[ext_resource type="Script" path="res://assets/scenes/fight_button.gd" id="11_1cky0"]
+
+[node name="MenuControl" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_upw7i")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_a4er6")
+expand_mode = 1
+
+[node name="UnitsContainer" type="VSplitContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.130208
+anchor_top = 0.248457
+anchor_right = 0.869792
+anchor_bottom = 0.748457
+offset_right = -2.00073
+offset_bottom = -4.00003
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="TeamContainer" type="HBoxContainer" parent="UnitsContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="ShopContainer" type="HBoxContainer" parent="UnitsContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ButtonContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.131944
+anchor_top = 0.768519
+anchor_right = 0.868056
+anchor_bottom = 0.964506
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="RollButton" type="Button" parent="ButtonContainer"]
+layout_direction = 1
+layout_mode = 2
+size_flags_horizontal = 3
+icon_alignment = 2
+expand_icon = true
+script = ExtResource("7_2c81v")
+
+[node name="FreezeButton" type="Button" parent="ButtonContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Freeze"
+icon = ExtResource("7_ygbje")
+icon_alignment = 2
+expand_icon = true
+script = ExtResource("9_spln8")
+
+[node name="FightButton" type="Button" parent="ButtonContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Fight!"
+icon = ExtResource("7_nmf4y")
+icon_alignment = 2
+expand_icon = true
+script = ExtResource("11_1cky0")
+
+[connection signal="pressed" from="ButtonContainer/RollButton" to="ButtonContainer/RollButton" method="_on_pressed"]
+[connection signal="pressed" from="ButtonContainer/FreezeButton" to="ButtonContainer/FreezeButton" method="_on_pressed"]
